@@ -1,0 +1,39 @@
+.servicesection-outer-container h1 {
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 55px;
+}
+
+.servicesection-outer-container{
+    padding-top: 20px;
+}
+
+.servicesection-grid-container{
+    display: grid;
+    align-content: center;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 60px;
+    
+}
+.text-align{
+    text-align: justify;
+    
+}
+
+.grid-item {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    height: 100%;
+}
+
+.grid-item h1 {
+    font-size: 35px;
+}
+
+.grid-item p {
+    grid-gap: 40px;
+    font-size: 22px;
+}
