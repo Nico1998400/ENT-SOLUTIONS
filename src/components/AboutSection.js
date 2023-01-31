@@ -4,8 +4,7 @@ import "./AboutSection.css";
 const AboutSection = () => {
   return (
     <>
-      
-        <div className="aboutsection-grid-container-upper">
+        <div className="aboutsection-grid-container-upper" id="about">
           <div className="about-grid-item-upper-left">
             <h1>About</h1>
             <p className="about-grid-item-upper-left-p1">
@@ -19,15 +18,10 @@ const AboutSection = () => {
               knowledge with our consulting experience.
             </p>
           </div>
-          <div className="aboutimage-item-upper-right">  
-            <img className="image"
-                  src="/images/img-1.jpg"
-                  alt="Avatar"
-                />
+          <div className="about-grid-item-upper-right">  
+            
           </div>
         </div>
-
-      
     </>
   );
 };
