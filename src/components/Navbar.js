@@ -1,67 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react'
 import { Link } from "react-scroll";
-import './Navbar.css';
+import './Navbar.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-function Navbar() {
-  const [click, setClick] = useState(false);
-  const [, setButton] = useState(true);
+const Navbar = () => {
+  const [showNavbar, setShowNavbar] = useState(false)
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener('resize', showButton);
+  const handleShowNavbar = () => {
+    setShowNavbar(!showNavbar)
+  }
 
   return (
-    <>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link 
-          to='home' 
-          className='navbar-logo' 
-          onClick={closeMobileMenu}
-           spy={true}
-              smooth={true}
-              offset={-100}
-              duration= {500}
-          >
-            <img width="200" height="35" src='/images/logo.png' alt='A Logo For ENT'></img>
-          </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-          </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link 
+    <nav className="navbar">
+      <div className="container">
+        <div className="logo">¨
+        <Link 
               to='home' 
               className='nav-links' 
-              onClick={closeMobileMenu}
               spy={true}
               smooth={true}
               offset={-100}
               duration= {500}
               activeClass="active"
               >
-                
+        <img width="200" height="35" src='/images/logo.png' alt='A Logo For ENT'></img>
+        </Link>
+        </div>
+        <div className="menu-icon" onClick={handleShowNavbar}>
+       <FontAwesomeIcon className="bars" icon={faBars} />
+        </div>
+        <div className={`nav-elements  ${showNavbar && 'active'}`}>
+        <ul>
+            <li>
+              <Link 
+              to='home' 
+              className='nav-links' 
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration= {500}
+              activeClass="active"
+              >
                 Home
               </Link>
             </li>
-            <li className='nav-item'>
+            <li>
               <Link
                 to='services'
                 className='nav-links'
-                onClick={closeMobileMenu}
                 spy={true}
                 smooth={true}
                 offset={-80}
@@ -71,11 +58,10 @@ function Navbar() {
                 Services
               </Link>
             </li>
-            <li className='nav-item'>
+            <li>
               <Link
                 to='about'
                 className='nav-links'
-                onClick={closeMobileMenu}
                 spy={true}
                 smooth={true}
                 offset={-80}
@@ -87,9 +73,9 @@ function Navbar() {
             </li>
           </ul>
         </div>
-      </nav>
-    </>
-  );
+      </div>
+    </nav>
+  )
 }
 
-export default Navbar;
+export default Navbar

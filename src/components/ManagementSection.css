@@ -19,9 +19,6 @@
 
   }
 
- 
-  
-
 .aboutsection-grid-container {
    display: flex;                  /* establish flex container */         
    flex-wrap: nowrap;              /* default value; can be omitted */
@@ -41,9 +38,10 @@
 
 .card {
     width: 100%;
+    
     justify-content: center;
     position: relative;
-    transition: 1.5s;
+    transition: 1s;
     transform-style: preserve-3d;
   }
   
@@ -74,6 +72,7 @@
   .aboutsection-image {
     width: 300px;
     height: 300px;
+    border-radius: 5%;
    
   }
   
