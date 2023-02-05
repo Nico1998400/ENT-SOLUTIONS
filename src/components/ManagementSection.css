@@ -27,21 +27,24 @@
    
 }
   .container {
-    padding: 2px 16px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
   }
 
   .about-grid-item {
     text-align: center;
     width: 400px;
     height: 400px;
+  
 }
 
 .card {
     width: 100%;
-    
     justify-content: center;
     position: relative;
-    transition: 1s;
+    transition: 1.0s;
     transform-style: preserve-3d;
   }
   
@@ -72,7 +75,7 @@
   .aboutsection-image {
     width: 300px;
     height: 300px;
-    border-radius: 5%;
+    border-radius: 3%;
    
   }
   
