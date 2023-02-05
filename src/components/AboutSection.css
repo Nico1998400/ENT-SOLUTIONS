@@ -6,7 +6,7 @@
 }
 
 .about-grid-item-upper-right{
-  background:rgb(0,0,0,0.4) url('/public/images/about.avif') center center/cover no-repeat;
+  background:rgb(0,0,0,0.4) url('/public/images/about.jpg') center center/cover no-repeat;
   background-blend-mode: darken;
 }
 
@@ -16,6 +16,7 @@
     grid-template-rows: repeat(2, 1fr); 
   }
 }
+
 
 .about-grid-item-upper-left h1 {
   color: white;
@@ -34,6 +35,63 @@
   padding: 20px;
   color: white;
   font-size: 20px
+}
+@media (max-width: 960px) {
+  .about-grid-item-upper-left h1 {
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 45px;
+  
+  }
+}
+
+
+@media (max-width: 960px) {
+  .about-grid-item-upper-left-p1  {
+    padding: 15px;
+    color: white;
+    font-size: 25px
+  }
+}
+
+
+@media (max-width: 960px) {
+  .about-grid-item-upper-left-p2 {
+    padding: 15px;
+    color: white;
+    font-size: 15px
+  }
+}
+
+
+
+
+@media (max-width: 560px) {
+  .about-grid-item-upper-left h1 {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .about-grid-item-upper-left-p1  {
+    padding: 10px;
+    color: white;
+    font-size: 20px
+  }
+}
+
+
+@media (max-width: 560px) {
+  .about-grid-item-upper-left-p2 {
+    padding: 10px;
+  color: white;
+  font-size: 14px
+  }
 }
 
 
